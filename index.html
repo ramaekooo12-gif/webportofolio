@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rama Eko Saputra | Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#ffffff;
+      color:#111;
+      line-height:1.6;
+    }
+
+    nav{
+      background:#111;
+      color:white;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#800020;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#800020;
+    }
+
+    .hero{
+      min-height:100vh;
+      background:#111;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:80px 10%;
+    }
+
+    .hero-container{
+      display:grid;
+      grid-template-columns:1fr 1.4fr;
+      gap:50px;
+      align-items:center;
+      max-width:1200px;
+      width:100%;
+    }
+
+    .profile-img{
+      width:330px;
+      height:330px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid #800020;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+      background:white;
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero h2{
+      color:#800020;
+      margin-bottom:20px;
+      font-size:26px;
+    }
+
+    .hero p{
+      color:#ddd;
+      font-size:18px;
+      max-width:700px;
+    }
+
+    .hero-buttons{
+      margin-top:30px;
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#800020;
+      color:white;
+      padding:14px 28px;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#5e0017;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      font-size:40px;
+      margin-bottom:40px;
+      color:#800020;
+      text-align:center;
+    }
+
+    .about p{
+      max-width:950px;
+      margin:auto;
+      color:#444;
+      font-size:18px;
+      text-align:center;
+    }
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#800020;
+    }
+
+    .project{
+      background:#111;
+      color:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+      margin-bottom:25px;
+    }
+
+    .project-content{
+      padding:30px;
+    }
+
+    .project-content h3{
+      color:#fff;
+      margin-bottom:15px;
+    }
+
+    .experience-item{
+      background:#f5f5f5;
+      padding:30px;
+      margin-bottom:20px;
+      border-left:5px solid #800020;
+      border-radius:10px;
+    }
+
+    .experience-item h3{
+      color:#800020;
+      margin-bottom:10px;
+    }
+
+    .cv-box{
+      background:#f5f5f5;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    iframe{
+      width:100%;
+      height:800px;
+      border:none;
+      border-radius:15px;
+      margin-top:20px;
+    }
+
+    .contact{
+      background:#111;
+      color:white;
+      text-align:center;
+    }
+
+    .contact .title{
+      color:#800020;
+    }
+
+    .contact p{
+      margin:12px 0;
+      font-size:18px;
+    }
+
+    .contact a{
+      color:white;
+      text-decoration:none;
+    }
+
+    .contact a:hover{
+      color:#800020;
+    }
+
+    footer{
+      background:black;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .profile-img{
+        width:250px;
+        height:250px;
+        margin:auto;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero h2{
+        font-size:22px;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      iframe{
+        height:600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>Portofolio</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+
+      <div>
+        <img src="ramaeko.jpeg" alt="Foto Rama Eko Saputra" class="profile-img">
+      </div>
+
+      <div>
+        <h1>Rama Eko Saputra</h1>
+
+        <h2>Statistics Graduate | Data Analyst Enthusiast</h2>
+
+        <p>
+          Lulusan Sarjana Statistika Universitas Bengkulu dengan minat pada
+          analisis data, visualisasi data, pemrograman data science, dan
+          pengolahan data untuk mendukung pengambilan keputusan.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#cv" class="btn">View CV</a>
+          <a href="CV_Rama_Eko_Saputra.pdf" class="btn" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="title">About Me</h2>
+
+    <p>
+      Saya adalah lulusan Statistika dari Universitas Bengkulu yang memiliki
+      kemampuan dalam analisis data, pengelolaan data, visualisasi data,
+      serta penggunaan perangkat lunak statistik. Saya memiliki pengalaman
+      magang di Badan Pusat Statistik dan aktif dalam organisasi mahasiswa.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="card">
+        <h3>Data Analysis</h3>
+        <p>RStudio, SPSS, EViews, Excel, Statistical Analysis</p>
+      </div>
+
+      <div class="card">
+        <h3>Data Science</h3>
+        <p>Data Processing, Data Management, Exploratory Data Analysis</p>
+      </div>
+
+      <div class="card">
+        <h3>Visualization & Design</h3>
+        <p>Data Visualization, Canva, Infographic Design, PowerPoint</p>
+      </div>
+
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <p>Communication, Teamwork, Problem Solving, Time Management</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="project">
+      <div class="project-content">
+        <h3>Poverty & Unemployment Analysis</h3>
+        <p>
+          Analisis kemiskinan dan pengangguran menggunakan metode
+          Nonparametric Regression dengan Local Polynomial Estimator
+          pada data Indonesia.
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <h3>Statistical Publication Support</h3>
+        <p>
+          Berkontribusi dalam penyusunan publikasi statistik daerah,
+          pengecekan missing values, input data, dan pembuatan infografis
+          selama magang di BPS Bengkulu Tengah.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="title">Experience</h2>
+
+    <div class="experience-item">
+      <h3>Badan Pusat Statistik Bengkulu Tengah</h3>
+      <p><b>Magang MBKM | Agustus 2024 - Desember 2024</b></p>
+      <p>
+        Melakukan input, verifikasi, pengecekan data, identifikasi missing
+        values, membantu penyusunan publikasi statistik, membuat infografis,
+        serta membantu dokumentasi kegiatan instansi.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>BEM FMIPA Universitas Bengkulu</h3>
+      <p><b>Anggota Sosial Pengabdian Masyarakat | 2023 - 2024</b></p>
+      <p>
+        Aktif dalam kegiatan PPK Ormawa dan kegiatan sosial seperti galang dana
+        untuk korban banjir dan musibah lainnya.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>HIMA Statistika Universitas Bengkulu</h3>
+      <p><b>Public Relation & Bistik Division | 2022 - 2024</b></p>
+      <p>
+        Berpengalaman dalam desain media organisasi, komunikasi mahasiswa,
+        hearing kebijakan, serta penyampaian aspirasi mahasiswa.
+      </p>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2 class="title">Curriculum Vitae</h2>
+
+    <div class="cv-box">
+      <p>
+        Berikut adalah CV saya. Anda juga dapat mengunduh CV melalui tombol di bawah ini.
+      </p>
+
+      <a href="CV_Rama_Eko_Saputra.pdf" class="btn" target="_blank">Download CV</a>
+
+      <iframe src="CV_Rama_Eko_Saputra.pdf"></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="title">Contact</h2>
+
+    <p>Email: <a href="mailto:ramaekooo12@gmail.com">ramaekooo12@gmail.com</a></p>
+    <p>Phone: <a href="tel:+6285268762502">+62 852-6876-2502</a></p>
+    <p>Instagram: <a href="https://instagram.com/rama._eko12" target="_blank">@rama._eko12</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6285268762502" target="_blank">Chat via WhatsApp</a></p>
+  </section>
+
+  <footer>
+    © 2026 Rama Eko Saputra. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
